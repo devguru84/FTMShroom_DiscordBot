@@ -48,6 +48,36 @@ const addMemberToRole = async (guildId, userId, roleId) => {
 
     let res;
     try {
+        await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/910263721614512168`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bot ${crypto.decrypt(config.token)}`,
+            },
+        });
+        await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/913501585705938995`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bot ${crypto.decrypt(config.token)}`,
+            },
+        });
+        await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/913502012375707698`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bot ${crypto.decrypt(config.token)}`,
+            },
+        });
+        await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/913503082669830156`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bot ${crypto.decrypt(config.token)}`,
+            },
+        });
+        await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/913862561508761601`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bot ${crypto.decrypt(config.token)}`,
+            },
+        });
         res = await fetch(`http://discord.com/api/v9/guilds/${guildId}/members/${userId}/roles/${roleId}`, {
             method: "PUT",
             headers: {
